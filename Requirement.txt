@@ -1,0 +1,9 @@
+setuptools
+pandas 
+numpy
+
+
+
+-e.
+
+
