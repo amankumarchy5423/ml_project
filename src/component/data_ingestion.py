@@ -23,11 +23,10 @@ ca =  certifi.where()
 
 
 class data_ingestion:
-        def __init__(self,config : data_ingestion_config,
-                     artifact : data_ingestion_artifact):
+        def __init__(self,config : data_ingestion_config,):
             try:
                  self.config = config
-                 self.artifact = artifact
+               #   self.artifact = artifact
             except Exception as e :
                 my_logger.info(e)
                 project_exception(e,sys)
@@ -85,7 +84,7 @@ class data_ingestion:
                   file = self.data_fetching(data=data,file_dir=data_file_path)
 
                   my_logger.info("creating data ingestion artifact object  ....")
-                  data_artifact = self.artifact(data_path=file)
+                  data_artifact = data_ingestion_artifact(data_path=file)
 
                   return data_artifact
 

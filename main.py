@@ -9,7 +9,7 @@ if __name__  == '__main__':
    print("project start")
    my_logger.info(">>>>> Taining Pipeline start <<<<<")
    obj_train_pipeline = Trian_pipeline()
-   obj_train_pipeline.data_ingestion_pipeline()
+   obj_train_pipeline.initiate_train_pipeline()
    my_logger.info(">>>>> Taining Pipeline ended <<<<<")
    print("project ended")
 

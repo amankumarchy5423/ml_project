@@ -5,17 +5,13 @@ import os,sys
 
 
 
-# @dataclass
+@dataclass
 class data_ingestion_artifact:
-    """Data Ingestion Artifact Class"""
+    data_path : str
+        
 
-    def __init__(self):
-        try :
-            data_path : str
-        except Exception as e:
-            my_logger.error(f"Error in data_ingestion_artifact class: {str(e)}")
-            raise project_exception(e,sys)
-
-    
-
-
+@dataclass
+class data_validation_artifact:
+            train_data_path : str
+            test_data_path : str
+        

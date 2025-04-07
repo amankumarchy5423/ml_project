@@ -15,7 +15,7 @@ if not os.path.exists(logs_info):
 
 logging.basicConfig(
     level=logging.INFO,
-    format="[%(asctime)s] [%(threadName)s] [%(levelname)s][%(message)s]",
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     datefmt='%Y_%m_%d %H:%M:%S',
     filename=logs_info,
 )
